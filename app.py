@@ -1,5 +1,9 @@
 from flask import Flask, request, jsonify, render_template
 import os
+import sys
+print(sys.path)
+
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src'))
 from flask_cors import CORS, cross_origin
 from ComputerVisionProject.utils.common import decodeImage
 from ComputerVisionProject.pipeline.predict import PredictionPipeline
@@ -15,6 +19,7 @@ CORS(app)
 
 class ClientApp:
     def __init__(self):
+        # self.filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'inputImage.jpg')
         self.filename = "inputImage.jpg"
         self.classifier = PredictionPipeline(self.filename)
 
@@ -39,7 +44,9 @@ def predictRoute():
     image = request.json['image']
     decodeImage(image, clApp.filename)
     result = clApp.classifier.predict()
+    print(f"Prediction Result: {result}")  # Add this line to check the result
     return jsonify(result)
+
 
 
 if __name__ == "__main__":

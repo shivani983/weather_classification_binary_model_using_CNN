@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/viran/Desktop/computer%20vision/weather-image-recognition-using-CNN/mlruns/0/8508ae6fdc4f4496ba92ac14f5badc95/artifacts
+end_time: 1744306401478
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8508ae6fdc4f4496ba92ac14f5badc95
+run_name: brawny-calf-506
+run_uuid: 8508ae6fdc4f4496ba92ac14f5badc95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744306367294
+status: 4
+tags: []
+user_id: viran

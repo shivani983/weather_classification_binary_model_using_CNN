@@ -25,6 +25,7 @@ list_of_files = [
     f"src/{project_name}/pipeline/stage_04_evaluation.py",
     f"src/{project_name}/entity/config_entity.py",
     f"src/{project_name}/constants/__init__.py",
+    "Dockerfile",
     "config/config.yaml",
     "params.yaml",
     "main.py",

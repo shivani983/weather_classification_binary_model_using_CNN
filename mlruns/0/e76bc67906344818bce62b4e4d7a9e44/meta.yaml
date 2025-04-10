@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/viran/Desktop/computer%20vision/weather-image-recognition-using-CNN/mlruns/0/e76bc67906344818bce62b4e4d7a9e44/artifacts
+end_time: 1744299291102
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e76bc67906344818bce62b4e4d7a9e44
+run_name: enthused-quail-972
+run_uuid: e76bc67906344818bce62b4e4d7a9e44
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744299264383
+status: 4
+tags: []
+user_id: viran

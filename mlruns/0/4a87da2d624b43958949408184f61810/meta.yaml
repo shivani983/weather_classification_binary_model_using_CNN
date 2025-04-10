@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/viran/Desktop/computer%20vision/weather-image-recognition-using-CNN/mlruns/0/4a87da2d624b43958949408184f61810/artifacts
+end_time: 1744292190930
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4a87da2d624b43958949408184f61810
+run_name: zealous-rook-485
+run_uuid: 4a87da2d624b43958949408184f61810
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744292154685
+status: 4
+tags: []
+user_id: viran
