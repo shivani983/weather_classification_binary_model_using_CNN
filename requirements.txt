@@ -3,11 +3,13 @@ pandas
 notebook
 numpy
 matplotlib
+joblib
+
 seaborn
 python-box==6.0.2
 PyYAML
 tqdm
-ensure==1.0.2
+ensure
 joblib
 types-pyYAML
 scipy

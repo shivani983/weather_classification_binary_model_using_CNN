@@ -3,18 +3,6 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: 
+  source_URL: https://github.com/shivani983/weather_classification_binary_model_using_CNN/raw/refs/heads/main/research/weather%20data.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
-
-
-prepare_base_model:
-  root_dir: artifacts/prepare_base_model
-  base_model_path: artifacts/prepare_base_model/base_model.h5
-  updated_base_model_path: artifacts/prepare_base_model/base_model_updated.h5
-
-
-
-training:
-  root_dir: artifacts/training
-  trained_model_path: artifacts/training/model.h5
