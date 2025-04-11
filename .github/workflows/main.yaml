@@ -83,8 +83,7 @@ jobs:
         with:
           mask-password: true
 
-      - name: Debug Image Name
-        run: echo "ECR_IMAGE: ${{ env.ECR_IMAGE }}"  # Accessing the ECR image name from environment
+      
 
       - name: Pull latest Docker image
         run: |
