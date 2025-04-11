@@ -115,13 +115,21 @@ python app.py
     ECR_REPOSITORY_NAME = simple-app
 ### model deployed
 
-![Screenshot](https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/docker_image.png?raw=true)
+```bash
+https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/docker_image.png?raw=true
+```
 
-![Screenshot](https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/ECR.png?raw=true)
+```bash
+https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/ECR.png?raw=true
+```
 
-![Screenshot](https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/iam_user.png?raw=true)
+```bash 
+https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/iam_user.png?raw=true
+```
 
-![Screenshot](https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/EC2_machine.png?raw=true)
+```bash 
+https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/EC2_machine.png?raw=true
+```
 
 
 
