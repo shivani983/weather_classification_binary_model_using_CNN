@@ -116,19 +116,19 @@ python app.py
 ### model deployed
 
 ```bash
-https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/docker_image.png?raw=true
+https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assets/docker_image.png?raw=true
 ```
 
 ```bash
-https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/ECR.png?raw=true
+https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assets/ECR.png?raw=true
 ```
 
 ```bash 
-https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/iam_user.png?raw=true
+https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assets/iam_user.png?raw=true
 ```
 
 ```bash 
-https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assests/EC2_machine.png?raw=true
+https://github.com/shivani983/weather_classification_binary_model_using_CNN/blob/main/aws_assets/EC2_machine.png?raw=true
 ```
 
 
