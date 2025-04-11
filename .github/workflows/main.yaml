@@ -60,7 +60,7 @@ jobs:
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+          echo "ECR_IMAGE=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_ENV  # Updated output handling
 
   Continuous-Deployment:
     name: Continuous Deployment
@@ -83,9 +83,12 @@ jobs:
         with:
           mask-password: true
 
+      - name: Debug Image Name
+        run: echo "ECR_IMAGE: ${{ env.ECR_IMAGE }}"  # Accessing the ECR image name from environment
+
       - name: Pull latest Docker image
         run: |
-          docker pull ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
+          docker pull ${{ env.ECR_IMAGE }}  # Using the environment variable
 
       - name: Stop and remove existing container (if running)
         run: |
@@ -98,7 +101,7 @@ jobs:
             -e AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
             -e AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
             -e AWS_REGION=${{ secrets.AWS_REGION }} \
-            ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
+            ${{ env.ECR_IMAGE }}  # Using the environment variable
 
       - name: Clean up unused Docker resources
         run: docker system prune -f
