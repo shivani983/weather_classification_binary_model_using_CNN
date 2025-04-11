@@ -1,14 +1,14 @@
-tensorflow==2.12.0
+tensorflow
 pandas
 notebook
-numpy==1.24
+numpy
 matplotlib
 
 setuptools
 joblib
-mlflow==2.2.2
+mlflow
 seaborn
-python-box==6.0.2
+python-box
 PyYAML
 tqdm
 ensure
