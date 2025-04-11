@@ -115,10 +115,10 @@ python app.py
     ECR_REPOSITORY_NAME = simple-app
 ### model deployed
 
-![Alt text]("aws_assests\EC2_machine.png")
-![Alt text]("aws_assests\docker_image.png")
-![Alt text]("aws_assests\Screenshot 2025-04-11 102607.png")
-![Alt text]("aws_assests\iam_user.png")
+![Screenshot](aws_assests\EC2_machine.png)
+![Screenshot](aws_assests\docker_image.png)
+![Screenshot](aws_assests\ECR.png)
+![Screenshot](aws_assests\iam_user.png)
 
 
 
