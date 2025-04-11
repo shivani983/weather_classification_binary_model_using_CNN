@@ -48,9 +48,8 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-
-      - name: Mask Docker password
-        run: echo "::add-mask::$(aws ecr get-login-password --region ${{ secrets.AWS_REGION }})"
+        with:
+          mask-password: true
 
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
@@ -64,6 +63,7 @@ jobs:
           echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
   Continuous-Deployment:
+    name: Continuous Deployment
     needs: build-and-push-ecr-image
     runs-on: self-hosted
     steps:
@@ -80,16 +80,18 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
+        with:
+          mask-password: true
 
-      - name: Pull latest images
+      - name: Pull latest Docker image
         run: |
           docker pull ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
-      - name: Stop and remove container if running
+      - name: Stop and remove existing container (if running)
         run: |
-          docker ps -q --filter "name=cnncls" | grep -q . && docker stop cnncls && docker rm -fv cnncls || echo "No running container"
+          docker ps -q --filter "name=cnncls" | grep -q . && docker stop cnncls && docker rm -fv cnncls || echo "No running container found."
 
-      - name: Run Docker Image to serve users
+      - name: Run Docker container
         run: |
           docker run -d -p 8080:8080 \
             --name=cnncls \
@@ -98,5 +100,5 @@ jobs:
             -e AWS_REGION=${{ secrets.AWS_REGION }} \
             ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
-      - name: Clean previous images and containers
+      - name: Clean up unused Docker resources
         run: docker system prune -f
